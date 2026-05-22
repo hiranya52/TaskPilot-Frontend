@@ -11,11 +11,8 @@ export class Task {
 
   constructor(private http: HttpClient){}
 
-  getAllTasks(): Observable<Task>{
-
-    return this.http.get<Task>(API_ENDPOINTS.task.getAllTasks);
-
-  }
-
+  getAllTasks(): Observable<Task[]> {
+  return this.http.get<Task[]>(API_ENDPOINTS.task.getAllTasks);
+}
 
 }

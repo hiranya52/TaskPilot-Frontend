@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TaskCard {
 
-  @Input() task!: Task;
+  // Use a flexible type to avoid template type-check mismatch across compilation contexts
+  @Input() task: any;
 
 }

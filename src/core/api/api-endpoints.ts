@@ -9,7 +9,7 @@ export const API_ENDPOINTS = {
   },
 
   task: {
-    getAllTasks: `${BASE_URL}/tasks`
+    getAllTasks: `${BASE_URL}/tasks/getAllTasks`
   }
 
 }
