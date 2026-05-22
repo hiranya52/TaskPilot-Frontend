@@ -1,4 +1,3 @@
-import { Dashboard } from './pages/dashboard/dashboard';
 import { Routes } from '@angular/router';
 import { LandingPage } from './pages/landing-page/landing-page';
 import { LogIn } from './pages/log-in/log-in';

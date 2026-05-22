@@ -1,29 +1,25 @@
-<div class="bg-white rounded-xl p-4 shadow border border-[#e3dfff]">
+<div class="task-card">
 
-  <div class="flex justify-between items-center">
-    <span
-      class="text-xs px-2 py-1 rounded-full text-white"
-      [ngClass]="{
-        'bg-red-500': task.priority === 'High',
-        'bg-yellow-500': task.priority === 'Medium',
-        'bg-green-500': task.priority === 'Low'
-      }"
-    >
-      {{ task.priority }}
-    </span>
+  <div class="top">
+    <span class="priority {{ task?.priority }}">{{ task?.priority }}</span>
 
-    <div class="flex gap-2">
-      <button class="text-gray-500 hover:text-blue-600">✏️</button>
-      <button class="text-gray-500 hover:text-red-600">🗑️</button>
+    <div class="actions">
+      <button class="material-symbols-outlined">edit</button>
+      <button class="material-symbols-outlined">delete</button>
     </div>
   </div>
 
-  <h3 class="font-bold mt-2">{{ task.title }}</h3>
-  <p class="text-sm text-gray-500">{{ task.description }}</p>
+  <h3>{{ task?.title }}</h3>
 
-  <div class="flex justify-between mt-3 text-xs text-gray-400">
-    <span>📅 {{ task.dueDate }}</span>
-    <span>👤 {{ task.assignee }}</span>
+  <p>{{ task?.description }}</p>
+
+  <div class="bottom">
+    <span class="date">
+      <span class="material-symbols-outlined">calendar_today</span>
+      {{ task?.dueDate }}
+    </span>
+
+    <span class="assignee">{{ task?.assignee }}</span>
   </div>
 
 </div>
