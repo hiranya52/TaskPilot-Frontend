@@ -24,7 +24,7 @@
       </div>
       <!-- Auth Buttons -->
       <div class="flex items-center space-x-4" data-purpose="auth-actions">
-        <button
+        <button (click)="onClick()"
           class="px-7 py-2.5 text-sm font-medium bg-linear-to-r from-indigo-500 to-purple-600 rounded-full hover:shadow-lg transition-all active:scale-95">
           Login
         </button>
@@ -42,7 +42,7 @@
         and deliver projects faster with a powerful Kanban board system.
       </p>
       <!-- Central CTA -->
-      <button
+      <button (click)="onClick()"
         class="bg-white text-black font-semibold px-10 py-4 rounded-full hover:bg-gray-200 transition-all shadow-xl active:scale-95"
         data-purpose="primary-cta">
         Login &amp; Track

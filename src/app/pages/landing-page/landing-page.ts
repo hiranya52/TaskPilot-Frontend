@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,4 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.css',
 })
-export class LandingPage {}
+export class LandingPage {
+
+  constructor( private router: Router ) {}
+
+  onClick(){
+    this.router.navigate(['/auth/login']);
+  }
+
+}
+
+
