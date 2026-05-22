@@ -14,4 +14,6 @@ export class KanbanColumn {
   @Input() title!: string;
   @Input() tasks: Task[] = [];
 
+  
+
 }

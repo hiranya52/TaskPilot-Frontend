@@ -6,6 +6,10 @@ export const API_ENDPOINTS = {
 
   user: {
     LogIn: `${BASE_URL}/auth/login`
+  },
+
+  task: {
+    getAllTasks: `${BASE_URL}/tasks`
   }
 
 }
