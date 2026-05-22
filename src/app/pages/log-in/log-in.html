@@ -28,18 +28,18 @@
       <!-- Form -->
       <form class="space-y-6" [formGroup]="userForm" (ngSubmit)="onSubmit()">
 
-        <!-- Email -->
+        <!-- Username -->
         <div>
-          <label for="email" class="block text-sm font-medium text-purple-200 mb-2">
-            Email Address
+          <label for="username" class="block text-sm font-medium text-purple-200 mb-2">
+            Username
           </label>
 
           <div class="relative">
             <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-purple-300">
-              mail
+              person
             </span>
 
-            <input id="email" type="email" placeholder="john@example.com"
+            <input id="username" type="text" formControlName="username" placeholder="john_doe"
               class="w-full pl-12 pr-4 py-3 rounded-lg border border-purple-400/30 bg-[#3b2a6e] text-white placeholder:text-purple-300 focus:outline-none focus:ring-4 focus:ring-purple-500/20 focus:border-[#7c3aed]" />
           </div>
         </div>
