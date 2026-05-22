@@ -9,7 +9,7 @@ export const routes: Routes = [
     component: LandingPage
   },
   {
-    path: '/auth/login',
+    path: 'auth/login',
     component: LogIn
   }
 
