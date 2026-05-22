@@ -1,53 +1,66 @@
-import { Component, Input } from '@angular/core';
-import { FilterBar } from "../../components/filter-bar/filter-bar";
-import { KanbanColumn } from "../../components/kanban-column/kanban-column";
-import { Navbar } from "../../components/navbar/navbar";
-import { Task } from '../../../model/Task.model';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { Navbar } from '../../components/navbar/navbar';
+import { FilterBar } from '../../components/filter-bar/filter-bar';
+import { KanbanColumn } from '../../components/kanban-column/kanban-column';
+
+import { TaskApiService } from '../../service/task-api-service';
+import { Tasks } from '../../../model/Tasks.model';
+
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [FilterBar, KanbanColumn, Navbar, CommonModule],
+  imports: [
+    CommonModule,
+    Navbar,
+    FilterBar,
+    KanbanColumn
+  ],
   templateUrl: './board.html',
   styleUrl: './board.css',
 })
-export class Board {
+export class Board implements OnInit {
 
-  tasks: Task[] = [
-    {
-      id: 1,
-      title: 'Setup Project',
-      description: 'Initialize Angular app',
-      priority: 'High',
-      assignee: 'Alex',
-      dueDate: '2026-06-01',
-      status: 'todo'
-    },
-    {
-      id: 2,
-      title: 'API Design',
-      description: 'Design REST APIs',
-      priority: 'Medium',
-      assignee: 'Sam',
-      dueDate: '2026-06-05',
-      status: 'inprogress'
-    }
-  ];
+  tasks: Tasks[] = [];
+
+  constructor(private taskService: TaskApiService) {}
+
+  ngOnInit(): void {
+    this.loadTasks();
+  }
+
+  loadTasks(): void {
+
+    console.log('Loading tasks...');
+
+    this.taskService.getAllTasks().subscribe({
+      next: (data) => {
+        console.log('Tasks received:', data);
+        this.tasks = data;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
+
+  }
 
   get todo() {
-    return this.tasks.filter(t => t.status === 'todo');
+    return this.tasks.filter(t => t.status === 'TODO');
   }
 
   get inprogress() {
-    return this.tasks.filter(t => t.status === 'inprogress');
+    return this.tasks.filter(t => t.status === 'IN_PROGRESS');
   }
 
   get review() {
-    return this.tasks.filter(t => t.status === 'review');
+    return this.tasks.filter(t => t.status === 'REVIEW');
   }
 
   get done() {
-    return this.tasks.filter(t => t.status === 'done');
+    return this.tasks.filter(t => t.status === 'DONE');
   }
 }

@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { Task } from '../../../model/Task.model';
+import { Component, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TaskApiService } from '../../service/task-api-service';
 
 @Component({
   selector: 'app-task-card',
@@ -10,7 +10,16 @@ import { CommonModule } from '@angular/common';
 })
 export class TaskCard {
 
-  // Use a flexible type to avoid template type-check mismatch across compilation contexts
   @Input() task: any;
+
+
+  private taskService = inject(TaskApiService)
+
+  onDelete(title: string) {
+  this.taskService.deleteTask(title).subscribe(() => {
+    console.log('Deleted:', title);
+    alert('Task deleted successfully ✅');
+  });
+}
 
 }

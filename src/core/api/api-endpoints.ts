@@ -9,7 +9,9 @@ export const API_ENDPOINTS = {
   },
 
   task: {
-    getAllTasks: `${BASE_URL}/tasks/getAllTasks`
+    getAllTasks: `${BASE_URL}/tasks/getAllTasks`,
+    create: `${BASE_URL}/tasks/create`,
+    delete: (id: number | string) =>  `${BASE_URL}/tasks/${encodeURIComponent(id)}`
   }
 
 }
