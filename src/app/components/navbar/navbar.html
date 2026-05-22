@@ -1,13 +1,26 @@
-<header class="flex justify-between items-center p-4 border-b bg-white">
-
-  <div class="flex items-center gap-2">
-    <span class="font-bold text-purple-600 text-xl">TaskPilot</span>
-  </div>
-
-  <div class="flex items-center gap-4">
-    <button>🔔</button>
-    <button>⚙️</button>
-    <div class="w-8 h-8 bg-purple-200 rounded-full"></div>
-  </div>
-
+<header class="flex justify-between items-center h-16 w-full px-md md:px-margin-desktop bg-surface border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="flex items-center gap-gutter">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">dashboard_customize</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">Task Pilot</span>
+</div>
+<div class="hidden md:flex items-center border-l border-outline-variant pl-gutter h-6">
+<span class="font-title-md text-title-md text-on-surface-variant">Kanban Board</span>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="hidden md:flex items-center gap-2 mr-gutter">
+<span class="font-label-md text-label-md text-on-surface-variant">Welcome, <span class="font-bold text-on-surface">admin</span></span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">settings</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBULrchirq1YMVctupmUq01-Hcd_bKF8SolB4HaT48dFR5KO3NnR3v0Xj-zp6BW-5eeTv20TK-vuBOr_tqe3SzYEBG75X8tocKcIR_QIehc1TdQRUaQ2WIQGCpREU8BFgbWzanWelhGlASA7D7Aep2qj2fOL83SdjfbCdTMIcZeMRYNqbpZr4NquzD9Hx_L0hcZ6NexNRt5hTav3Bkcw2eh-Iz0TCMUTk5apUOXsPFtdqRAXIlBFmpp9ukdMbHUWS5c190gRlj3c1M">
+</div>
+<button class="hidden md:block font-label-md text-label-md text-on-surface-variant hover:text-primary font-bold px-4 py-2 rounded-lg border border-outline-variant hover:border-primary transition-all active:scale-95">
+                    Logout
+                </button>
+</div>
+</div>
 </header>

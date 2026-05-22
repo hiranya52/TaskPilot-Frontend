@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { FilterBar } from "../filter-bar/filter-bar";
-import { KanbanColumn } from "../kanban-column/kanban-column";
+import { FilterBar } from "../../components/filter-bar/filter-bar";
+import { KanbanColumn } from "../../components/kanban-column/kanban-column";
 import { Task } from '../../../model/Task.model';
-import { Navbar } from "../navbar/navbar";
+import { Navbar } from "../../components/navbar/navbar";
 
 
 @Component({

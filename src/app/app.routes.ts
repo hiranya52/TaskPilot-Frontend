@@ -1,6 +1,8 @@
+import { Dashboard } from './pages/dashboard/dashboard';
 import { Routes } from '@angular/router';
 import { LandingPage } from './pages/landing-page/landing-page';
 import { LogIn } from './pages/log-in/log-in';
+import { Board } from './pages/board/board';
 
 export const routes: Routes = [
 
@@ -11,6 +13,10 @@ export const routes: Routes = [
   {
     path: 'auth/login',
     component: LogIn
+  },
+  {
+    path: 'board',
+    component: Board
   }
 
 
