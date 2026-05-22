@@ -1,12 +1,52 @@
 import { Component } from '@angular/core';
-import { NavBar } from "../nav-bar/nav-bar";
 import { FilterBar } from "../filter-bar/filter-bar";
 import { KanbanColumn } from "../kanban-column/kanban-column";
+import { Task } from '../../../model/Task.model';
+
 
 @Component({
   selector: 'app-board',
-  imports: [NavBar, FilterBar, KanbanColumn],
+  imports: [ FilterBar, KanbanColumn],
   templateUrl: './board.html',
   styleUrl: './board.css',
 })
-export class Board {}
+export class Board {
+
+  tasks: Task[] = [
+    {
+      id: 1,
+      title: 'Setup Project',
+      description: 'Initialize Angular app',
+      priority: 'High',
+      assignee: 'Alex',
+      dueDate: '2026-06-01',
+      status: 'todo'
+    },
+    {
+      id: 2,
+      title: 'API Design',
+      description: 'Design REST APIs',
+      priority: 'Medium',
+      assignee: 'Sam',
+      dueDate: '2026-06-05',
+      status: 'inprogress'
+    }
+  ];
+
+  get todo() {
+    return this.tasks.filter(t => t.status === 'todo');
+  }
+
+  get inprogress() {
+    return this.tasks.filter(t => t.status === 'inprogress');
+  }
+
+  get review() {
+    return this.tasks.filter(t => t.status === 'review');
+  }
+
+  get done() {
+    return this.tasks.filter(t => t.status === 'done');
+  }
+
+}
