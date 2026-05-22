@@ -21,7 +21,10 @@ export class LogIn {
 
 
   onSubmit(){
-    
+
+    console.log(this.userForm.value);
+
+
   }
 
 }

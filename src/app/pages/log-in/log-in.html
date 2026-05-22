@@ -30,7 +30,7 @@
 
         <!-- Username -->
         <div>
-          <label for="username" class="block text-sm font-medium text-purple-200 mb-2">
+          <label for="username" class="block text-sm font-medium text-purple-200 mb-2" formControlName="username">
             Username
           </label>
 
@@ -61,7 +61,7 @@
               lock
             </span>
 
-            <input id="password" type="password" placeholder="••••••••"
+            <input id="password" type="password" formControlName="password" placeholder="••••••••"
               class="w-full pl-12 pr-12 py-3 rounded-lg border border-purple-400/30 bg-[#3b2a6e] text-white placeholder:text-purple-300 focus:outline-none focus:ring-4 focus:ring-purple-500/20 focus:border-[#7c3aed]" />
 
             <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-purple-300 hover:text-white">
