@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Task } from '../../../model/Task.model';
 
 @Component({
   selector: 'app-kanban-column',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './kanban-column.html',
   styleUrl: './kanban-column.css',
 })
-export class KanbanColumn {}
+export class KanbanColumn {
+
+  @Input() title!: string;
+  @Input() tasks: Task[] = [];
+
+}
