@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { FilterBar } from "../filter-bar/filter-bar";
 import { KanbanColumn } from "../kanban-column/kanban-column";
 import { Task } from '../../../model/Task.model';
+import { Navbar } from "../navbar/navbar";
 
 
 @Component({
   selector: 'app-board',
-  imports: [ FilterBar, KanbanColumn],
+  imports: [FilterBar, KanbanColumn, Navbar],
   templateUrl: './board.html',
   styleUrl: './board.css',
 })
