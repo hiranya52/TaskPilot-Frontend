@@ -1,9 +1,10 @@
+import { User } from './../../../model/User.model';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-log-in',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './log-in.html',
   styleUrl: './log-in.css',
 })
@@ -18,10 +19,9 @@ export class LogIn {
     });
   }
 
-  // const user = this.userForm.value;
 
-
-// <form class="flex flex-col gap-5" [formGroup]="userForm" (ngSubmit)="onSubmit()">
-
+  onSubmit(){
+    
+  }
 
 }

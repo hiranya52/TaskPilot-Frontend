@@ -26,7 +26,7 @@
       </div>
 
       <!-- Form -->
-      <form class="space-y-6">
+      <form class="space-y-6" [formGroup]="userForm" (ngSubmit)="onSubmit()">
 
         <!-- Email -->
         <div>
