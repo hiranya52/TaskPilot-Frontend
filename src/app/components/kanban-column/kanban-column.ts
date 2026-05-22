@@ -19,6 +19,8 @@ export class KanbanColumn implements OnInit {
   ngOnInit(): void {
     this.taskService.getAllTasks().subscribe((data: Task[]) => {
       this.tasks = data;
+      console.log(this.tasks);
+
     });
   }
 }

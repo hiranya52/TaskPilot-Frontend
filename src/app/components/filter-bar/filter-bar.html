@@ -21,9 +21,13 @@
     </select>
   </div>
 
-  <button class="create-btn">
+  <button class="create-btn" (click)="openEdit()">
     <span class="material-symbols-outlined">add</span>
     Create Task
   </button>
+
+  <div *ngIf="showEdit"  class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+  <app-create-task (close)="closeEdit()"></app-create-task>
+</div>
 
 </section>

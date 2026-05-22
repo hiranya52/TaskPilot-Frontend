@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FilterBar } from "../../components/filter-bar/filter-bar";
 import { KanbanColumn } from "../../components/kanban-column/kanban-column";
-import { Task } from '../../../model/Task.model';
 import { Navbar } from "../../components/navbar/navbar";
-
+import { Task } from '../../../model/Task.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-board',
-  imports: [FilterBar, KanbanColumn, Navbar],
+  standalone: true,
+  imports: [FilterBar, KanbanColumn, Navbar, CommonModule],
   templateUrl: './board.html',
   styleUrl: './board.css',
 })
@@ -49,5 +50,4 @@ export class Board {
   get done() {
     return this.tasks.filter(t => t.status === 'done');
   }
-
 }
