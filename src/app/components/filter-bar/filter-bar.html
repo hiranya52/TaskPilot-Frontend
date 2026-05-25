@@ -1,0 +1,27 @@
+<section class="filter-bar">
+
+  <div class="search">
+    <span class="material-symbols-outlined">search</span>
+    <input placeholder="Search by task title..." />
+  </div>
+
+  <div class="filters">
+    <select>
+      <option>All Priorities</option>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+
+  </div>
+
+  <button class="create-btn" (click)="openEdit()">
+    <span class="material-symbols-outlined">add</span>
+    Create Task
+  </button>
+
+  <div *ngIf="showEdit"  class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+  <app-create-task (close)="closeEdit()"></app-create-task>
+</div>
+
+</section>

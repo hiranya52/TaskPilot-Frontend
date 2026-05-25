@@ -1,0 +1,160 @@
+<div class="min-h-screen flex flex-col bg-linear-to-br from-[#fcf8ff] via-[#f5f3ff] to-[#ede9fe] text-[#181445]">
+  <!-- Header -->
+  <header class="h-20 flex items-center px-4 md:px-12">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-[32px] text-[#7c3aed]">
+        rocket_launch
+      </span>
+      <span class="text-xl font-bold text-[#630ed4]">
+        TaskPilot
+      </span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex items-center justify-center px-4 py-10">
+    <div class="w-full max-w-md rounded-xl bg-[#2d1b5a] p-6 md:p-10 shadow-2xl border border-[#4a3d7c]">
+      <!-- Title -->
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-white mb-2">
+          Welcome Back
+        </h1>
+
+        <p class="text-purple-200">
+          Login and manage your tasks efficiently with TaskPilot.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form class="space-y-6" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <!-- Username -->
+        <div>
+          <label for="username" class="block text-sm font-medium text-purple-200 mb-2" formControlName="username">
+            Username
+          </label>
+
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-purple-300">
+              person
+            </span>
+
+            <input type="text" formControlName="username" placeholder="john_doe"
+              class="w-full pl-12 pr-4 py-3 rounded-lg border border-purple-400/30 bg-[#3b2a6e] text-white placeholder:text-purple-300 focus:outline-none focus:ring-4 focus:ring-purple-500/20 focus:border-[#7c3aed]" />
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label for="password" class="text-sm font-medium text-purple-200">
+              Password
+            </label>
+
+            <a href="#" class="text-sm text-[#d2bbff] hover:underline">
+              Forgot Password?
+            </a>
+          </div>
+
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-purple-300">
+              lock
+            </span>
+
+            <input id="password" type="password" formControlName="password" placeholder="••••••••"
+              class="w-full pl-12 pr-12 py-3 rounded-lg border border-purple-400/30 bg-[#3b2a6e] text-white placeholder:text-purple-300 focus:outline-none focus:ring-4 focus:ring-purple-500/20 focus:border-[#7c3aed]" />
+
+            <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-purple-300 hover:text-white">
+              <span class="material-symbols-outlined">
+                visibility
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remember Me -->
+        <!-- <div class="flex items-center justify-between">
+          <label class="flex items-center gap-2 text-sm text-purple-200">
+            <input type="checkbox" class="rounded border-purple-400" />
+            Remember Me
+          </label>
+        </div> -->
+
+        <!-- Login Button -->
+        <button type="submit"
+          class="w-full flex items-center justify-center gap-2 rounded-lg bg-[#7c3aed] py-3 font-semibold text-white transition hover:scale-[1.02] hover:shadow-lg">
+          Login
+          <span class="material-symbols-outlined text-[18px]">
+            arrow_forward
+          </span>
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <!-- <div class="relative my-8">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-purple-400/30"></div>
+        </div>
+
+        <div class="relative flex justify-center">
+          <span class="bg-[#2d1b5a] px-4 text-xs uppercase tracking-widest text-purple-300">
+            Or continue with
+          </span>
+        </div>
+      </div> -->
+
+      <!-- Social Login -->
+      <!-- <div class="grid grid-cols-2 gap-4">
+        <button type="button"
+          class="flex items-center justify-center gap-2 rounded-lg border border-purple-400/30 bg-[#3b2a6e] py-3 text-white hover:bg-[#4a3d7c]">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="w-5 h-5" />
+          Google
+        </button>
+
+        <button type="button"
+          class="flex items-center justify-center gap-2 rounded-lg border border-purple-400/30 bg-[#3b2a6e] py-3 text-white hover:bg-[#4a3d7c]">
+          <span class="material-symbols-outlined text-[#cebdff]">
+            key
+          </span>
+          SSO
+        </button>
+      </div> -->
+
+      <!-- Register -->
+      <div class="mt-8 text-center">
+        <p class="text-[#ccc3d8]">
+          New to TaskPilot?
+
+          <a href="#" class="font-semibold text-[#d2bbff] hover:underline">
+            Create Workspace
+          </a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-6 gap-4">
+    <div class="font-bold text-[#181445]">
+      TaskPilot
+    </div>
+
+    <div class="flex gap-6 text-sm text-[#4a4455]">
+      <a href="#" class="hover:text-[#630ed4]">
+        Privacy Policy
+      </a>
+
+      <a href="#" class="hover:text-[#630ed4]">
+        Terms of Service
+      </a>
+
+      <a href="#" class="hover:text-[#630ed4]">
+        Support
+      </a>
+    </div>
+
+    <div class="text-sm text-[#7b7487]">
+      © 2026 TaskPilot
+    </div>
+  </footer>
+</div>

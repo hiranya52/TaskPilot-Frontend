@@ -1,0 +1,25 @@
+<div class="task-card">
+
+  <div class="top">
+    <span class="priority {{ task?.priority }}">{{ task?.priority }}</span>
+
+    <div class="actions">
+      <button class="material-symbols-outlined">edit</button>
+      <button class="material-symbols-outlined" (click)="onDelete(task.title)">delete</button>
+    </div>
+  </div>
+
+  <h3>{{ task?.title }}</h3>
+
+  <p>{{ task?.description }}</p>
+
+  <div class="bottom">
+    <span class="date">
+      <span class="material-symbols-outlined">calendar_today</span>
+      {{ task?.dueDate }}
+    </span>
+
+    <span class="assignee">{{ task?.assignee }}</span>
+  </div>
+
+</div>

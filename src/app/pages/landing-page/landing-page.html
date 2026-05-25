@@ -1,0 +1,55 @@
+<body class="text-white overflow-hidden">
+  <!-- BEGIN: Hero Section -->
+  <main class="relative min-height-[100vh] h-screen w-full hero-gradient flex flex-col overflow-hidden">
+    <!-- Background Abstract Shape -->
+    <!-- Note: This replicates the glowing 3D blob seen in the reference -->
+    <div class="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[120%] h-[80%] z-0 pointer-events-none opacity-60">
+      <div
+        class="w-full h-full bg-linear-to-t from-[#4f46e5]/40 via-[#8b5cf6]/20 to-transparent blur-[120px] rounded-full">
+      </div>
+      <img alt="Abstract 3D Shape"
+        class="absolute bottom-0 left-0 w-full h-full object-contain mix-blend-screen opacity-80"
+        data-purpose="hero-blob-image"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeqF-mJXnKDmXVeHat1uvxYSe4LEtTk9Fp1xYfusFGh11TWpvucRPgcJZvCG1WzDzKZaQbt30BCXunzl-yu_Rd37r589g5gFrrO2gYbFl9QcQoEED9659ZQsvaU2YbrJk9BlFnJMNL-k9SpRAIebsa5b06LVt0QXBTfv8oJuZZ56clNni7iQfBhAeRH7d-P4e4eBzW8otrnP457NK-Gt8nsJuvb99y4O9YxogIGPc8Bor9K3g5O-EmTmK37hvlokLaACTbI9mavnU" />
+    </div>
+    <!-- Star/Particle Overlay -->
+    <div
+      class="absolute inset-0 z-0 opacity-40 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]">
+    </div>
+    <!-- BEGIN: MainHeader -->
+    <header class="relative z-50 flex items-center justify-between px-12 py-8" data-purpose="navigation-bar">
+      <!-- Logo -->
+      <div class="text-2xl font-bold tracking-tight" data-purpose="brand-logo">
+        Task Pilot
+      </div>
+      <!-- Auth Buttons -->
+      <div class="flex items-center space-x-4" data-purpose="auth-actions">
+        <button (click)="onClick()"
+          class="px-7 py-2.5 text-sm font-medium bg-linear-to-r from-indigo-500 to-purple-600 rounded-full hover:shadow-lg transition-all active:scale-95">
+          Login
+        </button>
+      </div>
+    </header>
+    <!-- END: MainHeader -->
+    <!-- BEGIN: Hero Content -->
+    <section class="relative z-10 grow flex flex-col items-center justify-start pt-20 text-center px-4"
+      data-purpose="hero-content">
+      <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-8 max-w-4xl leading-tight">
+        Streamline Your <br> Workflow with TaskPilot
+      </h1>
+      <p class="text-lg text-gray-400 max-w-xl mb-12 leading-relaxed">
+        Plan, prioritize, and monitor tasks in one place. TaskPilot helps teams stay organized, improve collaboration,
+        and deliver projects faster with a powerful Kanban board system.
+      </p>
+      <!-- Central CTA -->
+      <button (click)="onClick()"
+        class="bg-white text-black font-semibold px-10 py-4 rounded-full hover:bg-gray-200 transition-all shadow-xl active:scale-95"
+        data-purpose="primary-cta">
+        Login &amp; Track
+      </button>
+
+    </section>
+    <!-- END: Hero Content -->
+  </main>
+  <!-- END: Hero Section -->
+</body>

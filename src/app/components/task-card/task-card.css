@@ -1,0 +1,65 @@
+.task-card {
+  background: #fff;
+  border: 1px solid #e3dfff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.05);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priority {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.priority.High {
+  background: #ffdad6;
+  color: #93000a;
+}
+
+.priority.Medium {
+  background: #d2bbff;
+  color: #4f319c;
+}
+
+.priority.Low {
+  background: #e7deff;
+  color: #4a3d7c;
+}
+
+.actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+p {
+  color: #4a4455;
+  font-size: 14px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #4a4455;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
